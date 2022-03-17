@@ -1,0 +1,19 @@
+
+<h1>All of the Patients</h1>
+
+<table border="10" [cellSpacing]="10" cellPadding="10">
+    <tr>
+        <th>Patient Id</th>
+        <th>Patient Name</th>
+        <th>Symptom</th>
+        <th>Bill Amount</th>
+        <th>Doctor Attended</th>
+    </tr>
+    <tr *ngFor="let p of patients" [ngStyle]="{'color':getColor(p.symptom)}">
+    <td>{{p.patientId}}</td>
+    <td>{{p.patientName}}</td>
+    <td>{{p.symptom}}</td>
+    <td>{{p.totalBill}}</td>
+    <td>{{p.doctorAttended}}</td>
+    </tr>
+</table>
